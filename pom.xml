@@ -142,6 +142,7 @@
     </dependencies>
 
     <build>
+        <!--设置项目名字-->
         <finalName>fc-hp</finalName>
         <plugins>
             <plugin>
