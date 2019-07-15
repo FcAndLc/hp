@@ -1,0 +1,15 @@
+<configuration>
+	<property name="LOG_HOME" value="../" />
+
+	<!-- 控制台 appender -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!--控制台打印资源加载信息debug,error-->
+	<root level="errror">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

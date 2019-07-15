@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: dev
+
+---
+#开发环境配置
+spring:
+  profiles: dev
+
+server:
+  port: 8090
+
+
+---
+#测试环境配置
+spring:
+  profiles: test
+
+server:
+  port: 8091
+
+
+---
+#生产环境配置
+spring:
+  profiles: online
+
+server:
+  port: 8092

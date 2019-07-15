@@ -1,0 +1,76 @@
+server:
+  port: 8090
+  session-timeout: 30
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+spring.datasource.url: jdbc:mysql://47.105.171.220:3306/fc?useUnicode=true&characterEncoding=utf8   #  <---1
+spring.datasource.username: root   #  <---2
+spring.datasource.password: fclovelx    #  <---3
+spring.datasource.driver-class-name: com.mysql.jdbc.Driver
+#druid连接池配置
+spring.datasource.type: com.alibaba.druid.pool.DruidDataSource
+spring.datasource.connectionProperties: druid.stat.mergeSql=true
+spring:
+  datasource:
+         # 下面为连接池的补充设置，应用到上面所有数据源中
+         # 初始化大小，最小，最大
+         initialSize: 1
+         minIdle: 3
+         maxActive: 20
+         # 配置获取连接等待超时的时间
+         maxWait: 60000
+         # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+         timeBetweenEvictionRunsMillis: 60000
+         # 配置一个连接在池中最小生存的时间，单位是毫秒
+         minEvictableIdleTimeMillis: 30000
+         #select 'x'
+         validationQuery: SELECT 1
+         testWhileIdle: true
+         testOnBorrow: false
+         testOnReturn: false
+         # 打开PSCache，并且指定每个连接上PSCache的大小
+         poolPreparedStatements: true
+         maxPoolPreparedStatementPerConnectionSize: 20
+         # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+         filters: stat,wall,slf4j
+         # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+         # 合并多个DruidDataSource的监控数据
+         #useGlobalDataSourceStat: true
+
+##默认spring  session   用redis   这里把他给关掉
+#spring.session.store-type: none
+
+spring.session.store-type: redis
+spring.redis.host: 47.105.171.220    #  <---4
+spring.redis.port: 6379
+spring.redis.password: 123456      #  <---5
+spring.redis.timeout: 60000
+spring.redis.database: 0
+spring.redis.pool.min-idle: 0
+spring.redis.pool.max-active: 8
+spring.redis.pool.max-idle: 8
+spring.redis.pool.max-wait: -1
+
+
+mybatis:
+   mapper-locations: classpath:com/fc/mapper/**/*.xml  #  <---6
+   logging.config: logback.xml
+
+spring.thymeleaf.encoding: UTF-8
+spring.thymeleaf.mode: LEGACYHTML5
+spring.thymeleaf.prefix: /WEB-INF/template/   #  <---7
+spring.thymeleaf.suffix: .html
+spring.thymeleaf.cache: false
+
+
+oss.bucket: bucket20180420
+oss.endpoint: oss-cn-beijing.aliyuncs.com
+oss.baseurl: bucket20180420.oss-cn-beijing.aliyuncs.com
+oss.accessKeyId: LTAISilxHXCZm1AI
+oss.accessKeySecret: YRm0Mp6J6HBuJRy95C9ttyN8XDxUwE
+oss.roleArn: acs:ram::1240205135585562:role/role
+oss.region: cn-beijing
+oss.stsVersion: 2015-04-01
+oss.expir: 86400000

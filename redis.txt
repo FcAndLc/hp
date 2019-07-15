@@ -1,0 +1,4 @@
+Redis远程连接不上解决方案
+1.bind 127.0.0.1改为 #bind 127.0.0.1
+2.protected-mode yes 改为 protected-mode no
+3.加入 daemonize no(这个是是否在后台启动不占用一个主程窗口)
