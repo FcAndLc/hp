@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fc.mapper.UsersMapper">
-  <resultMap id="BaseResultMap" type="com.fc.model.UserModel">
+<mapper namespace="com.fc.weixin.mapper.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.fc.weixin.model.UserModel">
     <id column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -20,13 +20,13 @@
     delete from t_user
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.fc.model.UserModel">
+  <insert id="insert" parameterType="com.fc.weixin.model.UserModel">
     insert into t_user (user_id, user_name, password, 
       phone)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{phone,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.fc.model.UserModel">
+  <insert id="insertSelective" parameterType="com.fc.weixin.model.UserModel">
     insert into t_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userId != null">
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.fc.model.UserModel">
+  <update id="updateByPrimaryKeySelective" parameterType="com.fc.weixin.model.UserModel">
     update t_user
     <set>
       <if test="userName != null">
@@ -72,7 +72,7 @@
     </set>
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.fc.model.UserModel">
+  <update id="updateByPrimaryKey" parameterType="com.fc.weixin.model.UserModel">
     update t_user
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

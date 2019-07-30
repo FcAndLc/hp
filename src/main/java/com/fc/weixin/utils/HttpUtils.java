@@ -1,15 +1,10 @@
-package com.fc.utils;
+package com.fc.weixin.utils;
 
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.methods.InputStreamRequestEntity;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.RequestEntity;
 
 public class HttpUtils {
     /**

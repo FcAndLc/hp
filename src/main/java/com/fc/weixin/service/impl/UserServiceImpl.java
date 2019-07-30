@@ -1,8 +1,8 @@
-package com.fc.service.impl;
+package com.fc.weixin.service.impl;
 
-import com.fc.mapper.UsersMapper;
-import com.fc.model.UserModel;
-import com.fc.service.UserService;
+import com.fc.weixin.mapper.UsersMapper;
+import com.fc.weixin.model.UserModel;
+import com.fc.weixin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

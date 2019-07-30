@@ -1,4 +1,4 @@
-package com.fc.constans;
+package com.fc.weixin.constans;
 
 import com.alibaba.fastjson.JSONObject;
 

@@ -1,4 +1,4 @@
-package com.fc.model;
+package com.fc.weixin.model;
 
 public class UserModel {
     private Integer userId;

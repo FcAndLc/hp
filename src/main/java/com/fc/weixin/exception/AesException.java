@@ -1,4 +1,4 @@
-package com.fc.exception;
+package com.fc.weixin.exception;
 @SuppressWarnings("serial")
 public class AesException extends Exception {
 

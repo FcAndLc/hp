@@ -1,4 +1,4 @@
-package com.fc.intercepter;
+package com.fc.weixin.intercepter;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;

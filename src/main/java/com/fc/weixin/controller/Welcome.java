@@ -1,10 +1,10 @@
-package com.fc.controller;
+package com.fc.weixin.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fc.constans.MenuConstans;
-import com.fc.exception.AesException;
-import com.fc.utils.HttpUtils;
-import com.fc.utils.SHA1;
+import com.fc.weixin.constans.MenuConstans;
+import com.fc.weixin.exception.AesException;
+import com.fc.weixin.utils.HttpUtils;
+import com.fc.weixin.utils.SHA1;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

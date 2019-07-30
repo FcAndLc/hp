@@ -1,7 +1,9 @@
-package com.fc.mapper;
+package com.fc.weixin.mapper;
 
-import com.fc.model.UserModel;
+import com.fc.weixin.model.UserModel;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UsersMapper {
     int deleteByPrimaryKey(Integer userId);
 

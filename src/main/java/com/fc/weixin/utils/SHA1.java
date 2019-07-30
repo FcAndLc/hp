@@ -1,6 +1,6 @@
-package com.fc.utils;
+package com.fc.weixin.utils;
 
-import com.fc.exception.AesException;
+import com.fc.weixin.exception.AesException;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
